@@ -1,0 +1,11 @@
+interface:
+  display_name: "List this session's writes"
+  short_description: "Show what this conversation preserved."
+  default_prompt: "What did you record in Retiform during this conversation?"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "retiform"
+      description: "Read history for entries written in this conversation."
+      transport: "streamable_http"
+      url: "https://api.retiform.ai/mcp"

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "retiform",
+  "version": "0.5.0",
+  "description": "Shared, governed memory for decisions, findings, and handoffs across AI agents.",
+  "author": {
+    "name": "Retiform LLC",
+    "url": "https://retiform.ai/"
+  },
+  "homepage": "https://retiform.ai/docs/",
+  "repository": "https://github.com/retiform-ai/retiform-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-memory",
+    "collaboration",
+    "decisions",
+    "knowledge"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "Retiform",
+        "shortDescription": "Shared memory for teams of AI agents",
+        "longDescription": "Recall and preserve cited decisions, findings, and handoffs across ChatGPT, Codex, Claude Code, and other agents.",
+        "developerName": "Retiform LLC",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://retiform.ai/",
+        "privacyPolicyURL": "https://retiform.ai/privacy/",
+        "termsOfServiceURL": "https://retiform.ai/terms/",
+        "defaultPrompt": [
+          "Recall what my team has already decided about this work.",
+          "Record this decision in Retiform with its reason.",
+          "Leave a handoff for the next agent working on this project."
+        ],
+        "brandColor": "#A55A37",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
+}

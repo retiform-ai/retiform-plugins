@@ -1,0 +1,11 @@
+interface:
+  display_name: "Hand off work"
+  short_description: "Read or leave a cross-platform handoff."
+  default_prompt: "Leave a durable Retiform handoff for the next agent."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "retiform"
+      description: "Recall and preserve durable cross-platform handoffs."
+      transport: "streamable_http"
+      url: "https://api.retiform.ai/mcp"

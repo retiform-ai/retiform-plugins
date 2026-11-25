@@ -1,0 +1,29 @@
+{
+  "name": "retiform",
+  "plugins": [
+    {
+      "name": "retiform",
+      "source": {
+        "source": "local",
+        "path": "./plugins/retiform"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "retiform-codex-companion",
+      "source": {
+        "source": "local",
+        "path": "./plugins/retiform-codex-companion"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
