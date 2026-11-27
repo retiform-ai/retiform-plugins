@@ -1,0 +1,11 @@
+interface:
+  display_name: "Import existing decisions"
+  short_description: "Seed Retiform from approved source files."
+  default_prompt: "Import the decision records I provide into Retiform."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "retiform"
+      description: "Upload citable documents and record approved decisions."
+      transport: "streamable_http"
+      url: "https://api.retiform.ai/mcp"

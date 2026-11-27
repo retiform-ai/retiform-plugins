@@ -1,0 +1,11 @@
+interface:
+  display_name: "Set up Retiform"
+  short_description: "Connect Retiform and verify project scope."
+  default_prompt: "Connect Retiform and show me the Projects I can use."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "retiform"
+      description: "Read and write the team's governed Retiform memory."
+      transport: "streamable_http"
+      url: "https://api.retiform.ai/mcp"

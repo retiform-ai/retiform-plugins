@@ -1,0 +1,11 @@
+interface:
+  display_name: "Preserve a finding"
+  short_description: "Record a reusable fact with its evidence."
+  default_prompt: "Preserve this finding in Retiform with its citations."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "retiform"
+      description: "Retrieve evidence and preserve cited findings."
+      transport: "streamable_http"
+      url: "https://api.retiform.ai/mcp"

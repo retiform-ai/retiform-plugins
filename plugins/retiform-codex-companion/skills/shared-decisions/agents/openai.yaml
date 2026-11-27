@@ -1,0 +1,11 @@
+interface:
+  display_name: "Share a decision"
+  short_description: "Recall, record, or correct a team decision."
+  default_prompt: "Record this decision in Retiform with its reason."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "retiform"
+      description: "Recall, record, and supersede governed team memory."
+      transport: "streamable_http"
+      url: "https://api.retiform.ai/mcp"
