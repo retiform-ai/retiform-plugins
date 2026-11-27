@@ -1,5 +1,5 @@
 // The repository link: `.retiform/project.json` at the repository root, holding the repository's Project entity
-// identifier and the file format's version (034 data-model.md, research R3).
+// identifier and the file format's version.
 //
 // Anyone who can open a pull request can change this file, and the identifier reaches text the agent reads. The
 // file is therefore accepted only when it is a JSON object with exactly the members `project` and `version`,
@@ -76,7 +76,7 @@ export function readLink(start) {
 }
 
 /**
- * `node link.mjs --check` (034 T013): the link skill's check of the written file, from a working directory.
+ * `node link.mjs --check`: the link skill's check of the written file, from a working directory.
  * Returns the exit status and the one line to print; the line names the Project or a fixed reason, never other
  * content of the file.
  */

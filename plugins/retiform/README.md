@@ -4,14 +4,8 @@ This is the portable public Retiform plugin for ChatGPT, Codex, and compatible A
 Retiform's production remote MCP server with OAuth dynamic client registration and adds workflows for decisions,
 findings, handoffs, session write summaries, and approved document imports.
 
-The public package deliberately has no lifecycle hooks. Run `npm run release` to create both its public archive and
-the separately named manual Codex lifecycle companion archive. Run `node release.mjs --repository <empty-directory>`
-to build the neutral Git marketplace tree containing both packages. Review fixtures and reviewer instructions stay
-out of every published artifact.
-
-For local development, add this repository as a Codex plugin marketplace or place the plugin under a local
-marketplace path, then install it through the ChatGPT desktop Plugins Directory. Authentication always happens
-through the host's connection flow; no credential belongs in this directory.
+The public package deliberately has no lifecycle hooks. Authentication always happens through the host's connection
+flow; no credential belongs in this directory.
 
 ## Install and authenticate
 

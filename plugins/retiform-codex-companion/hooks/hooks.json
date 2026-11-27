@@ -25,6 +25,18 @@
         ]
       }
     ],
+    "PostToolUse": [
+      {
+        "matcher": "^mcp__retiform__(record_memory|supersede_memory)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/track-handoff.mjs\"",
+            "timeout": 3
+          }
+        ]
+      }
+    ],
     "PreCompact": [
       {
         "matcher": "manual|auto",

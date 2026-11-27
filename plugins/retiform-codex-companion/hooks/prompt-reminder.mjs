@@ -1,14 +1,9 @@
-// The prompt reminder hook (#1131, contracts/plugin-surface.md *Before each prompt*).
-//
-// Of the four moments, asking for context before acting is the one sessions miss: assemble_context fell to 3 calls a
-// day, then none, across nine sessions (#1131, 2026-11-23). The session-start instruction names it, but is read hours
-// before the moment comes. Claude Code runs a UserPromptSubmit hook on each prompt, including a message from another
-// session and a scheduled turn, and adds its stdout to the model's context beside the prompt. This hook adds one
-// sentence there, linked repository or not: assemble_context needs no Project.
+// Add a context reminder beside each user prompt, including a message from another session or a scheduled turn.
+// The reminder works in a linked or unlinked repository because assemble_context needs no Project.
 //
 // A background task's notification is not a request, so it gets nothing. Claude Code gives no field for a prompt's
 // origin, so a notification is recognised by its markers in the prompt's first 500 characters, where a wrapper such
-// as <system-reminder> may come first (W1's review of #1593). A message from another session gets the reminder even
+// as <system-reminder> may come first. A message from another session gets the reminder even
 // when it quotes a notification.
 // Like the other hooks, it makes no network call, reads only its input, and never throws.
 import { isEntry } from './link.mjs';

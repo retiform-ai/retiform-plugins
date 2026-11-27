@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { unlinkSync } from 'node:fs';
 import { join } from 'node:path';
 import { isEntry } from './link.mjs';
+import { dataDirectory, removeTrackedHandoff } from './track-handoff.mjs';
 
 function parse(text) {
   try {
@@ -14,19 +15,19 @@ function parse(text) {
 
 export function removeSessionRecord(text, env) {
   const input = parse(text);
-  const data = typeof env.PLUGIN_DATA === 'string' && env.PLUGIN_DATA !== ''
-    ? env.PLUGIN_DATA
-    : env.CLAUDE_PLUGIN_DATA;
+  const data = dataDirectory(env);
   if (typeof data !== 'string' || data === '' || typeof input.session_id !== 'string' || input.session_id === '') {
     return false;
   }
   const name = createHash('sha256').update(input.session_id, 'utf8').digest('hex');
+  let removed = removeTrackedHandoff(data, input.session_id);
   try {
     unlinkSync(join(data, 'instructed-sessions', name));
-    return true;
+    removed = true;
   } catch {
-    return false;
+    // Either record may already be absent.
   }
+  return removed;
 }
 
 async function readAll(stream) {

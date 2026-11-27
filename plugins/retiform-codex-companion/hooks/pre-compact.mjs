@@ -3,7 +3,8 @@ import { isEntry } from './link.mjs';
 export function respond() {
   return JSON.stringify({
     systemMessage:
-      'Retiform: after compaction, Codex will restore the Project recall and durable handoff instruction.'
+      'Retiform: the latest handoff identifier is tracked locally. After compaction, Codex will use it to update the ' +
+      'same handoff instead of recording a duplicate.'
   });
 }
 
