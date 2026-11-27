@@ -21,8 +21,8 @@
       "onboardingSkill": "./skills/setup/SKILL.md",
       "interface": {
         "displayName": "Retiform (Codex lifecycle)",
-        "shortDescription": "Shared memory for teams of AI agents",
-        "longDescription": "Recall and preserve cited decisions, findings, and handoffs across ChatGPT, Codex, Claude Code, and other agents.",
+        "shortDescription": "Shared memory for AI teams",
+        "longDescription": "Give AI agents shared, governed memory for team decisions, cited findings, and durable handoffs across sessions and tools.",
         "developerName": "Retiform LLC",
         "category": "Productivity",
         "capabilities": [
@@ -30,6 +30,7 @@
           "Write"
         ],
         "websiteURL": "https://retiform.ai/",
+        "supportURL": "https://retiform.ai/support/",
         "privacyPolicyURL": "https://retiform.ai/privacy/",
         "termsOfServiceURL": "https://retiform.ai/terms/",
         "defaultPrompt": [
