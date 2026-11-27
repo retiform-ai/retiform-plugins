@@ -10,7 +10,8 @@ Retiform is shared, governed memory for AI agents. This repository contains:
 For Codex lifecycle reminders, install the companion instead of the portable Retiform plugin. Do not install both:
 the companion already includes the same MCP server and skills.
 
-The public plugin connects to `https://api.retiform.ai/mcp` with OAuth dynamic client registration. Packages contain
-no credential, tenant identifier, or reviewer account. Review lifecycle hooks before trusting the companion.
+The public plugin connects to `https://api.retiform.ai/mcp` with OAuth Client ID Metadata Documents (CIMD), with
+host-managed dynamic client registration as a compatibility fallback. Packages contain no credential, tenant
+identifier, or reviewer account. Review lifecycle hooks before trusting the companion.
 
 Product and setup documentation: https://retiform.ai/docs/agent-plugins/

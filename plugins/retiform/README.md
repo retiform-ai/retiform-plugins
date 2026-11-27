@@ -1,8 +1,9 @@
 # Retiform universal plugin
 
 This is the portable public Retiform plugin for ChatGPT, Codex, and compatible Agent Plugins hosts. It connects to
-Retiform's production remote MCP server with OAuth dynamic client registration and adds workflows for decisions,
-findings, handoffs, session write summaries, and approved document imports.
+Retiform's production remote MCP server with OAuth Client ID Metadata Documents (CIMD), with host-managed dynamic
+client registration as a compatibility fallback, and adds workflows for decisions, findings, handoffs, session write
+summaries, and approved document imports.
 
 The public package deliberately has no lifecycle hooks. Authentication always happens through the host's connection
 flow; no credential belongs in this directory.
